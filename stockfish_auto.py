@@ -3,7 +3,7 @@ import chess.engine
 import pyautogui
 import time
 
-# Board coordinates on the screen (top-left and bottom-right corners)
+# Board coordinates on the screen (top-left and bottom-right corners) Go to and measure the coordinates chess_board_coords.py
 X0, Y0 = 579, 200  # верхний левый угол доски (h8)
 X1, Y1 = 1263, 840  # нижний правый угол доски (a1)
 BOARD_WIDTH = X1 - X0
@@ -73,4 +73,5 @@ try:
 finally:
     engine.quit()
     print("♟ Игра завершена.")
+
 
