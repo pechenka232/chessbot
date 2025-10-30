@@ -6,8 +6,8 @@ import cv2
 import time
 
 # Board coordinates on the screen (top-left and bottom-right corners) Go to and measure the coordinates chess_board_coords.py
-X0, Y0 = 579, 200
-X1, Y1 = 1263, 840
+X0, Y0 = 579, 200  # upper left corner of the board(h8)
+X1, Y1 = 1263, 840  # lower right corner of the board (a1)
 BOARD_WIDTH = X1 - X0
 BOARD_HEIGHT = Y1 - Y0
 CELL_WIDTH = BOARD_WIDTH // 8
@@ -158,4 +158,5 @@ try:
 finally:
     engine.quit()
     cv2.destroyAllWindows()
+
 
