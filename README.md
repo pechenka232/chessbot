@@ -72,7 +72,12 @@ BOARD_COORDS = (X0, Y0, X1, Y1)  # ← Specify here the coordinates of the top-l
 
 2. **Install dependencies:**  
    ```bash
-   pip install -r requirements.txt
+   pip install  chess
+pip install chess.engine
+pip install pyautogui
+pip install numpy as np
+pip install cv2
+pip install time
    ```
 
 3. **Download Stockfish:**  
