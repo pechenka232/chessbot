@@ -3,9 +3,7 @@ import chess.engine
 import pyautogui
 import time
 
-# -------------------------------
-# Настройки доски на экране
-# -------------------------------
+# Board coordinates on the screen (top-left and bottom-right corners)
 X0, Y0 = 579, 200  # верхний левый угол доски (h8)
 X1, Y1 = 1263, 840  # нижний правый угол доски (a1)
 BOARD_WIDTH = X1 - X0
@@ -15,21 +13,16 @@ CELL_HEIGHT = BOARD_HEIGHT // 8
 HALF_W = CELL_WIDTH // 2
 HALF_H = CELL_HEIGHT // 2
 
-# -------------------------------
-# Stockfish
-# -------------------------------
+# Path to the Stockfish engine executable
+# Replace the path below with the location where you have Stockfish installed on your computer
 ENGINE_PATH = r"C:\Users\user\Desktop\шахматы\stockfish\stockfish-windows-x86-64-avx2.exe"
 engine = chess.engine.SimpleEngine.popen_uci(ENGINE_PATH)
 
-# -------------------------------
-# Инициализация доски
-# -------------------------------
+
 board = chess.Board()
 print("♙♟ Stockfish играет сам за черных и белых на Lichess ♙♟")
 
-# -------------------------------
-# Конвертация квадрата в экранные координаты
-# -------------------------------
+
 def square_to_screen(square):
     file = chess.square_file(square)
     rank = chess.square_rank(square)
@@ -80,3 +73,4 @@ try:
 finally:
     engine.quit()
     print("♟ Игра завершена.")
+
