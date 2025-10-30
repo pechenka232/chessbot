@@ -15,7 +15,8 @@ PIECE_NAMES = {
     "N": "Knight",
     "P": "Pawn"
 }
-
+# Path to the Stockfish engine executable
+# Replace the path below with the location where you have Stockfish installed on your computer
 ENGINE_PATH = r"C:\Users\user\Desktop\chess\stockfish\stockfish-windows-x86-64-avx2.exe"
 
 OPENINGS = {
@@ -246,3 +247,4 @@ root.bind("<Escape>", lambda e: root.quit())
 draw_board(); draw_pieces(); update_status()
 root.mainloop()
 engine.quit()
+
